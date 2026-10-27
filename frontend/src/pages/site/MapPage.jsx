@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+﻿import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import MapBoard from '../../components/site/MapBoard'
@@ -27,7 +27,7 @@ export default function MapPage() {
       <SiteBanner
         kicker="Inventory map"
         title="Quỹ căn trên bản đồ bàn làm việc."
-        desc="Năm địa bàn Maison Cư. Pin vàng là căn đang vận hành — chọn để mở hồ sơ."
+        desc="Năm địa bàn Black Panther. Pin vàng là căn đang vận hành — chọn để mở hồ sơ."
         anh="/properties/hero.jpg"
         compact
       />
@@ -69,3 +69,5 @@ export default function MapPage() {
     </>
   )
 }
+
+

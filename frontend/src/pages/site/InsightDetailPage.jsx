@@ -1,4 +1,4 @@
-import { Link, Navigate, useParams } from 'react-router-dom'
+﻿import { Link, Navigate, useParams } from 'react-router-dom'
 import { tinTheoId, TIN_THI_TRUONG } from '../../data/listings'
 
 export default function InsightDetailPage() {
@@ -21,7 +21,7 @@ export default function InsightDetailPage() {
         <h1>{b.tieu}</h1>
         <p className="lead">{b.tomTat}</p>
         {(b.noiDung || []).map((p) => <p key={p}>{p}</p>)}
-        <p className="muted">Đây là brief nội bộ Maison Cư — không phải tin rao. Định giá cụ thể liên hệ advisory desk.</p>
+        <p className="muted">Đây là brief nội bộ Black Panther — không phải tin rao. Định giá cụ thể liên hệ advisory desk.</p>
         <Link to="/chu-nha" className="btn btn--gold" style={{ marginTop: 8 }}>Nhờ định giá căn</Link>
       </article>
       {khac.length > 0 && (
@@ -44,3 +44,5 @@ export default function InsightDetailPage() {
     </div>
   )
 }
+
+

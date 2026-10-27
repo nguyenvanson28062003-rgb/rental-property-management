@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Icon } from '../../components/icons'
 import PropertyCard from '../../components/site/PropertyCard'
@@ -28,9 +28,9 @@ export default function HomePage() {
         <div className="hero-re__shade" />
         <div className="hero-re__ornament" aria-hidden="true" />
         <div className="hero-re__content">
-          <p className="page-kicker" style={{ color: 'var(--gold-2)' }}>TP. Hồ Chí Minh · Private leasing</p>
+          <p className="page-kicker" style={{ color: 'var(--gold-2)' }}>TP. Hà Nội · Private leasing</p>
           <h1>Tìm nơi ở đúng chuẩn quỹ bất động sản.</h1>
-          <p>Maison Cư tuyển chọn, vận hành và cho thuê căn hộ, loft, penthouse — hợp đồng minh bạch, bàn giao đúng mô tả.</p>
+          <p>Black Panther tuyển chọn, vận hành và cho thuê căn hộ, loft, penthouse — hợp đồng minh bạch, bàn giao đúng mô tả.</p>
           <form className="hero-search" onSubmit={tim}>
             <label>
               <span>Từ khóa</span>
@@ -132,12 +132,12 @@ export default function HomePage() {
               <li>Cổng cư dân theo dõi hợp đồng và thông báo</li>
             </ul>
             <div className="stack-btns">
-              <Link to="/ve-chung-toi" className="btn btn--gold">Về Maison Cư</Link>
+              <Link to="/ve-chung-toi" className="btn btn--gold">Về Black Panther</Link>
               <Link to="/quy-trinh" className="btn btn--ghost">Quy trình thuê</Link>
             </div>
           </div>
           <div className="split-photo">
-            <img src="/properties/interior.jpg" alt="Nội thất căn hộ Maison Cư" />
+            <img src="/properties/interior.jpg" alt="Nội thất căn hộ Black Panther" />
           </div>
         </div>
       </section>
@@ -220,3 +220,5 @@ export default function HomePage() {
     </>
   )
 }
+
+

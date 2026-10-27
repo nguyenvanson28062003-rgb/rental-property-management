@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { Icon } from '../icons'
 import { VAN_PHONG } from '../../data/listings'
@@ -56,7 +56,7 @@ export default function SiteLayout() {
           <NavLink to="/thi-truong" onClick={() => setMo(false)}>Thị trường</NavLink>
           <div className={`nav-sub ${moMaison ? 'open' : ''}`}>
             <button type="button" className="nav-sub__btn" onClick={() => setMoMaison((v) => !v)}>
-              Maison
+              Black Panther
             </button>
             <div className="nav-sub__menu">
               <NavLink to="/ve-chung-toi" onClick={() => { setMo(false); setMoMaison(false) }}>Về chúng tôi</NavLink>
@@ -81,9 +81,9 @@ export default function SiteLayout() {
       <footer className="site-foot">
         <div className="site-foot__grid site-foot__grid--4">
           <div>
-            <p className="page-kicker">Maison Cư</p>
+            <p className="page-kicker">Black Panther</p>
             <h3>Vận hành không gian sống như một quỹ tài sản.</h3>
-            <p className="muted">Tư vấn leasing, quản lý cư dân và hợp đồng dài hạn cho căn hộ, loft và nhà phố tại TP.HCM.</p>
+            <p className="muted">Tư vấn leasing, quản lý cư dân và hợp đồng dài hạn cho căn hộ, loft và nhà phố tại Hà Nội.</p>
           </div>
           <div>
             <h4>Văn phòng</h4>
@@ -131,7 +131,7 @@ export default function SiteLayout() {
           </div>
         </div>
         <div className="site-foot__copy">
-          <span>© {new Date().getFullYear()} Maison Cư Property Desk</span>
+          <span>© {new Date().getFullYear()} Black Panther Property Desk</span>
           <span>
             <Link to="/chinh-sach">Điều khoản</Link>
             {' · '}
@@ -150,3 +150,5 @@ export default function SiteLayout() {
     </div>
   )
 }
+
+

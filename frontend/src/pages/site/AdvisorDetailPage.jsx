@@ -1,4 +1,4 @@
-import { Link, Navigate, useParams } from 'react-router-dom'
+﻿import { Link, Navigate, useParams } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import PropertyCard from '../../components/site/PropertyCard'
 import { doiNguTheoId, listingsTheoAdvisor, VAN_PHONG } from '../../data/listings'
@@ -11,7 +11,7 @@ export default function AdvisorDetailPage() {
 
   return (
     <>
-      <SiteBanner kicker={p.chucVu} title={p.ten} desc={`${p.khu} · ${p.nam} trên bàn Maison Cư.`} anh={p.anh} compact />
+      <SiteBanner kicker={p.chucVu} title={p.ten} desc={`${p.khu} · ${p.nam} trên bàn Black Panther.`} anh={p.anh} compact />
       <div className="site-page">
         <p className="crumb">
           <Link to="/">Trang chủ</Link> / <Link to="/doi-ngu">Đội ngũ</Link> / {p.ten}
@@ -53,3 +53,5 @@ export default function AdvisorDetailPage() {
     </>
   )
 }
+
+

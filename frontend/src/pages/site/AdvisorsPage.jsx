@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { DOI_NGU, VAN_PHONG } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function AdvisorsPage() {
       <SiteBanner
         kicker="The desk"
         title="Advisor phụ trách quỹ, không phải sale ca."
-        desc="Mỗi người một địa bàn. Họ dẫn xem, soạn hợp đồng và theo gia hạn — cùng một giọng Maison Cư."
+        desc="Mỗi người một địa bàn. Họ dẫn xem, soạn hợp đồng và theo gia hạn — cùng một giọng Black Panther."
         anh="/properties/office.jpg"
       />
       <div className="site-page">
@@ -39,3 +39,5 @@ export default function AdvisorsPage() {
     </>
   )
 }
+
+

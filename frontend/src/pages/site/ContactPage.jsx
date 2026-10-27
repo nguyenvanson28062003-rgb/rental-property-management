@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { VAN_PHONG, DOI_NGU } from '../../data/listings'
 import { useToast } from '../../context/ToastContext'
 import SiteBanner from '../../components/site/SiteBanner'
+import { themYeuCau } from '../../utils/yeuCauStore'
 
 export default function ContactPage() {
   const toast = useToast()
@@ -10,7 +11,24 @@ export default function ContactPage() {
 
   function gui(e) {
     e.preventDefault()
-    toast.thanhCong('Đã nhận liên hệ. Bộ phận leasing sẽ phản hồi trong giờ làm việc.')
+    const nhuCauMap = {
+      thue: 'Khách muốn tìm thuê căn hộ',
+      chu: 'Chủ nhà muốn gửi căn vào quỹ',
+      'cu-dan': 'Cư dân cần hỗ trợ dịch vụ lưu trú',
+    }
+
+    themYeuCau({
+      nguon: form.nhuCau === 'cu-dan' ? 'cu_dan' : 'khach_ngoai',
+      chuDe: form.nhuCau === 'cu-dan' ? 'bao-tri' : form.nhuCau === 'chu' ? 'khac' : 'xem-phong',
+      tieuDe: `[Liên hệ] ${nhuCauMap[form.nhuCau] || 'Yêu cầu tư vấn'}`,
+      hoTen: form.ten.trim(),
+      sdt: form.sdt.trim(),
+      email: form.email.trim(),
+      mucDo: 'binh_thuong',
+      noiDung: `Nhu cầu: ${nhuCauMap[form.nhuCau] || form.nhuCau}\nNội dung liên hệ: ${form.noiDung.trim()}`,
+    })
+
+    toast.thanhCong('Đã gửi liên hệ tới Bộ phận Leasing. Đội ngũ sẽ phản hồi trong giờ làm việc.')
     setForm({ ten: '', sdt: '', email: '', nhuCau: 'thue', noiDung: '' })
   }
 
@@ -68,7 +86,7 @@ export default function ContactPage() {
             </dl>
             <div className="map-frame">
               <iframe
-                title="Bản đồ Maison Cư"
+                title="Bản đồ Black Panther"
                 src="https://maps.google.com/maps?q=27%20Nguyen%20Hue%20District%201%20Ho%20Chi%20Minh&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 loading="lazy"
               />
@@ -94,3 +112,5 @@ export default function ContactPage() {
     </>
   )
 }
+
+

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { TUYEN_DUNG, VAN_PHONG } from '../../data/listings'
 import { useToast } from '../../context/ToastContext'
@@ -19,7 +19,7 @@ export default function CareersPage() {
       <SiteBanner
         kicker="Careers"
         title="Làm việc như một leasing house, không phải sàn ca."
-        desc="Ít người, quỹ nhỏ, trách nhiệm rõ. Maison Cư tuyển người chịu được biên bản và khách khó tính."
+        desc="Ít người, quỹ nhỏ, trách nhiệm rõ. Black Panther tuyển người chịu được biên bản và khách khó tính."
         anh="/properties/hero.jpg"
       />
       <div className="site-page">
@@ -74,10 +74,12 @@ export default function CareersPage() {
               <li>Phỏng vấn tại {VAN_PHONG.diaChi}</li>
               <li>Thử việc trên quỹ thật, không kịch bản sale</li>
             </ul>
-            <Link to="/ve-chung-toi" className="text-link">Đọc về Maison Cư →</Link>
+            <Link to="/ve-chung-toi" className="text-link">Đọc về Black Panther →</Link>
           </aside>
         </div>
       </div>
     </>
   )
 }
+
+

@@ -8,6 +8,7 @@ import PropertyCard from '../../components/site/PropertyCard'
 import FloorPlan from '../../components/site/FloorPlan'
 import { useShortlist } from '../../context/ShortlistContext'
 import { Icon } from '../../components/icons'
+import { themYeuCau } from '../../utils/yeuCauStore'
 
 export default function PropertyDetailPage() {
   const { id } = useParams()
@@ -25,7 +26,18 @@ export default function PropertyDetailPage() {
 
   function gui(e) {
     e.preventDefault()
-    toast.thanhCong('Đã gửi yêu cầu xem nhà. Leasing desk sẽ gọi lại trong giờ hành chính.')
+    themYeuCau({
+      nguon: 'khach_ngoai',
+      chuDe: 'xem-phong',
+      tieuDe: `Khách hỏi thuê căn ${item.ma} - ${item.tieuDe}`,
+      hoTen: form.ten.trim(),
+      sdt: form.sdt.trim(),
+      email: form.email.trim(),
+      maPhong: item.ma,
+      mucDo: 'binh_thuong',
+      noiDung: form.loiNhan.trim() || `Khách quan tâm căn hộ ${item.ma} (${item.giaNiemYet} triệu/tháng). Cần tư vấn xem phòng.`,
+    })
+    toast.thanhCong('Đã gửi yêu cầu tới Leasing Desk. Đội ngũ sẽ liên hệ trong giờ hành chính.')
     setForm({ ten: '', sdt: '', email: '', loiNhan: '' })
   }
 

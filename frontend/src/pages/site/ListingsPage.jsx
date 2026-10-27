@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+﻿import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import PropertyCard from '../../components/site/PropertyCard'
 import SiteBanner from '../../components/site/SiteBanner'
@@ -49,7 +49,7 @@ export default function ListingsPage() {
       <SiteBanner
         kicker="Inventory"
         title="Quỹ căn đang vận hành"
-        desc="Giá đã gồm phí quản lý tòa nhà, chưa gồm điện nước. Mỗi căn có hồ sơ đo đạc và hợp đồng chuẩn Maison Cư."
+        desc="Giá đã gồm phí quản lý tòa nhà, chưa gồm điện nước. Mỗi căn có hồ sơ đo đạc và hợp đồng chuẩn Black Panther."
         anh="/properties/living.jpg"
         compact
       />
@@ -159,3 +159,5 @@ export default function ListingsPage() {
     </>
   )
 }
+
+

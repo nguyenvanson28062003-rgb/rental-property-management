@@ -1,9 +1,9 @@
-import { KHU_VUC } from '../../data/listings'
+﻿import { KHU_VUC } from '../../data/listings'
 
 export default function MapBoard({ items, activeId, onSelect }) {
   return (
     <div className="map-board">
-      <div className="map-board__canvas" aria-label="Bản đồ quỹ căn TP.HCM">
+      <div className="map-board__canvas" aria-label="Bản đồ quỹ căn Hà Nội">
         <span className="map-board__river" />
         {KHU_VUC.map((k) => (
           <em key={k.id} className="map-board__district" style={{ left: `${k.pin.x}%`, top: `${k.pin.y}%` }}>
@@ -26,3 +26,4 @@ export default function MapBoard({ items, activeId, onSelect }) {
     </div>
   )
 }
+

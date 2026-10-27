@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+﻿import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { CAU_HOI } from '../../data/listings'
@@ -12,7 +12,7 @@ export default function FaqPage() {
       <SiteBanner
         kicker="FAQ"
         title="Hỏi desk trước khi xem nhà."
-        desc="Thuê căn, gửi quỹ, cổng cư dân — trả lời ngắn, đúng ngôn ngữ Maison Cư."
+        desc="Thuê căn, gửi quỹ, cổng cư dân — trả lời ngắn, đúng ngôn ngữ Black Panther."
         anh="/properties/interior.jpg"
         compact
       />
@@ -51,3 +51,5 @@ export default function FaqPage() {
     </>
   )
 }
+
+

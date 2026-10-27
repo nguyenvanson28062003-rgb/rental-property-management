@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { LISTINGS, listingTheoId, VAN_PHONG } from '../../data/listings'
 import { useToast } from '../../context/ToastContext'
+import { themYeuCau } from '../../utils/yeuCauStore'
 
 export default function ViewingPage() {
   const toast = useToast()
@@ -17,6 +18,17 @@ export default function ViewingPage() {
 
   function gui(e) {
     e.preventDefault()
+    themYeuCau({
+      nguon: 'khach_ngoai',
+      chuDe: 'xem-phong',
+      tieuDe: `Đăng ký xem căn ${chon ? chon.ma : (form.canId || 'Căn hộ')}`,
+      hoTen: form.ten.trim(),
+      sdt: form.sdt.trim(),
+      email: form.email.trim(),
+      maPhong: chon?.ma || '',
+      mucDo: 'binh_thuong',
+      noiDung: `Khách đăng ký xem căn vào khung giờ: ${form.khung === 'sang' ? 'Sáng (09:00 - 11:30)' : form.khung === 'chieu' ? 'Chiều (14:00 - 17:00)' : 'Cuối tuần'}. Ghi chú: ${form.loiNhan || 'Không có'}`,
+    })
     toast.thanhCong('Đã đặt lịch. Officer sẽ xác nhận khung giờ trong 24 giờ làm việc.')
     navigate('/dat-lich/xac-nhan', { state: { ten: form.ten, loai: 'xem' } })
   }

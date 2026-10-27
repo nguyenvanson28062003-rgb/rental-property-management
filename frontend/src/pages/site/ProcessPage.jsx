@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { QUY_TRINH_THUE, VAN_PHONG } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function ProcessPage() {
       <SiteBanner
         kicker="How we lease"
         title="Năm bước, một officer, không vòng vo."
-        desc="Từ lọc nhu cầu đến gia hạn. Maison Cư không đưa bạn vào nhóm xem nhà đông hay inbox môi giới."
+        desc="Từ lọc nhu cầu đến gia hạn. Black Panther không đưa bạn vào nhóm xem nhà đông hay inbox môi giới."
         anh="/properties/06.jpg"
       />
       <div className="site-page">
@@ -45,3 +45,5 @@ export default function ProcessPage() {
     </>
   )
 }
+
+

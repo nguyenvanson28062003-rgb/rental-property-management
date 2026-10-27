@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { DIEU_KHOAN, VAN_PHONG } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function PolicyPage() {
       <SiteBanner
         kicker="House policy"
         title="Điều khoản niêm yết & dữ liệu."
-        desc="Ngắn, đọc được. Maison Cư không bán danh sách enquire và không đăng ồ ạt."
+        desc="Ngắn, đọc được. Black Panther không bán danh sách enquire và không đăng ồ ạt."
         anh="/properties/office.jpg"
         compact
       />
@@ -30,3 +30,5 @@ export default function PolicyPage() {
     </>
   )
 }
+
+

@@ -170,8 +170,21 @@ public class HopDongServiceImpl implements HopDongService {
         HopDong h = timDetail(id);
         hopDongRepo.findWithNguoiOCungById(id);
         hopDongRepo.findWithDichVuById(id);
-        BigDecimal congNo = hopDongRepo.congNo(id);
-        return mapper.toResponse(h, congNo != null ? congNo : BigDecimal.ZERO);
+        return mapper.toResponse(h, layCongNoAnToan(id));
+    }
+
+    private BigDecimal layCongNoAnToan(Integer id) {
+        try {
+            Number count = (Number) em.createNativeQuery(
+                    "SELECT COUNT(*) FROM information_schema.routines " +
+                    "WHERE routine_schema = 'quan_ly_nha_tro' AND routine_name = 'fn_cong_no_hop_dong'")
+                    .getSingleResult();
+            if (count != null && count.intValue() > 0) {
+                BigDecimal cn = hopDongRepo.congNo(id);
+                if (cn != null) return cn;
+            }
+        } catch (Exception ignored) {}
+        return BigDecimal.ZERO;
     }
 
     @Override

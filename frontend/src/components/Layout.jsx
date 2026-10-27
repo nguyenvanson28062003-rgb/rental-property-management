@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext'
 import { ThongBaoApi } from '../api/services'
 import { nhan } from '../utils/format'
 import { Icon } from './icons'
+import { getYeuCauList } from '../utils/yeuCauStore'
 
 const MENU_NHAN_VIEN = [
   { to: '/quan-ly', label: 'Tổng quan', end: true, icon: 'overview' },
@@ -12,13 +13,15 @@ const MENU_NHAN_VIEN = [
   { to: '/quan-ly/khach-thue', label: 'Khách thuê', icon: 'users' },
   { to: '/quan-ly/hop-dong', label: 'Hợp đồng', icon: 'file' },
   { to: '/quan-ly/dich-vu', label: 'Dịch vụ', icon: 'spark' },
+  { to: '/quan-ly/yeu-cau', label: 'Yêu cầu & Hỗ trợ', icon: 'phone' },
 ]
 
 const MENU_CU_DAN = [
   { to: '/quan-ly/cong-cu-dan', label: 'Cổng cư dân', end: true, icon: 'home' },
-  { to: '/quan-ly/hop-dong-cua-toi', label: 'Hồ sơ thuê', icon: 'file' },
+  { to: '/quan-ly/hop-dong-cua-toi', label: 'Hồ sơ hợp đồng', icon: 'file' },
+  { to: '/quan-ly/dich-vu-cu-dan', label: 'Dịch vụ & Chi phí', icon: 'spark' },
   { to: '/quan-ly/thong-bao', label: 'Thông báo', icon: 'bell' },
-  { to: '/quan-ly/ho-tro', label: 'Concierge', icon: 'phone' },
+  { to: '/quan-ly/ho-tro', label: 'Báo sự cố & Hỗ trợ', icon: 'phone' },
 ]
 
 const TITLES = {
@@ -28,13 +31,15 @@ const TITLES = {
   '/quan-ly/khach-thue': ['Residents', 'Khách thuê'],
   '/quan-ly/hop-dong': ['Leasing', 'Hợp đồng'],
   '/quan-ly/dich-vu': ['Amenities', 'Dịch vụ'],
+  '/quan-ly/yeu-cau': ['Service desk', 'Yêu cầu khách hàng & Cư dân'],
   '/quan-ly/tai-khoan': ['Access', 'Tài khoản'],
   '/quan-ly/thong-bao': ['Inbox', 'Thông báo'],
   '/quan-ly/doi-mat-khau': ['Security', 'Đổi mật khẩu'],
-  '/quan-ly/hop-dong-cua-toi': ['My lease', 'Hồ sơ thuê'],
+  '/quan-ly/hop-dong-cua-toi': ['My lease', 'Hồ sơ hợp đồng'],
+  '/quan-ly/dich-vu-cu-dan': ['Amenities', 'Dịch vụ & Chi phí'],
   '/quan-ly/cong-cu-dan': ['Resident portal', 'Cổng cư dân'],
   '/quan-ly/ho-so': ['Member file', 'Hồ sơ thành viên'],
-  '/quan-ly/ho-tro': ['Concierge', 'Gặp leasing desk'],
+  '/quan-ly/ho-tro': ['Concierge', 'Báo sự cố & Hỗ trợ'],
 }
 
 export default function Layout() {
@@ -42,12 +47,28 @@ export default function Layout() {
   const navigate = useNavigate()
   const location = useLocation()
   const [chuaDoc, setChuaDoc] = useState(0)
+  const [soYeuCauCho, setSoYeuCauCho] = useState(0)
   const [moMenu, setMoMenu] = useState(false)
 
   useEffect(() => {
     ThongBaoApi.chuaDoc()
       .then(({ data }) => setChuaDoc(data.soChuaDoc || 0))
       .catch(() => {})
+
+    function capNhatSoYeuCau() {
+      try {
+        const ds = getYeuCauList()
+        const cho = ds.filter((x) => x.trangThai === 'cho_xu_ly').length
+        setSoYeuCauCho(cho)
+      } catch {}
+    }
+    capNhatSoYeuCau()
+    window.addEventListener('yeucau_updated', capNhatSoYeuCau)
+    window.addEventListener('storage', capNhatSoYeuCau)
+    return () => {
+      window.removeEventListener('yeucau_updated', capNhatSoYeuCau)
+      window.removeEventListener('storage', capNhatSoYeuCau)
+    }
   }, [location.pathname])
 
   const [kicker, title] = useMemo(() => {
@@ -61,7 +82,7 @@ export default function Layout() {
     if (location.pathname.startsWith('/quan-ly/hop-dong/')) return ['Lease file', 'Chi tiết hợp đồng']
     if (location.pathname.startsWith('/quan-ly/khach-thue/')) return ['Resident file', 'Hồ sơ khách thuê']
     if (location.pathname.startsWith('/quan-ly/phong/')) return ['Room file', 'Hồ sơ phòng']
-    return ['Maison Cư', 'Quản lý lưu trú']
+    return ['Black Panther', 'Quản lý lưu trú']
   }, [location.pathname, laAdmin])
 
   async function xuLyDangXuat() {
@@ -81,7 +102,7 @@ export default function Layout() {
         <Link to={laKhach ? '/quan-ly/cong-cu-dan' : '/'} className="brand">
           <div className="brand-mark"><Icon name="home" size={20} /></div>
           <div>
-            <strong>Maison Cư</strong>
+            <strong>Black Panther</strong>
             <small>{desk}</small>
           </div>
         </Link>
@@ -92,6 +113,11 @@ export default function Layout() {
             <NavLink key={m.to} to={m.to} end={m.end} onClick={() => setMoMenu(false)}>
               <Icon name={m.icon} size={16} />
               {m.label}
+              {m.to === '/quan-ly/yeu-cau' && soYeuCauCho > 0 && (
+                <span className="badge-count" style={{ background: 'var(--gold-2)', color: '#fff' }}>
+                  {soYeuCauCho}
+                </span>
+              )}
             </NavLink>
           ))}
           {laKhach && MENU_CU_DAN.map((m) => (
@@ -163,3 +189,5 @@ export default function Layout() {
     </div>
   )
 }
+
+

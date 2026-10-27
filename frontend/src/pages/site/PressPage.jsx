@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { BAO_CHI, BAO_CHI_BAI } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function PressPage() {
       <SiteBanner
         kicker="Press room"
         title="Được trích dẫn, không phải tự khen."
-        desc="Maison Cư xuất hiện khi các desk nghiên cứu nói về thuê dịch vụ TP.HCM — không phải advertorial."
+        desc="Black Panther xuất hiện khi các desk nghiên cứu nói về thuê dịch vụ Hà Nội — không phải advertorial."
         anh="/properties/04.jpg"
         compact
       />
@@ -36,3 +36,5 @@ export default function PressPage() {
     </>
   )
 }
+
+

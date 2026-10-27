@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { TIN_THI_TRUONG } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function InsightsPage() {
       <SiteBanner
         kicker="Research desk"
         title="Ghi chép thị trường thuê."
-        desc="Không phải tin rao. Đây là brief nội bộ Maison Cư gửi khách và chủ nhà — ngắn, có địa bàn, có hàm ý định giá."
+        desc="Không phải tin rao. Đây là brief nội bộ Black Panther gửi khách và chủ nhà — ngắn, có địa bàn, có hàm ý định giá."
         anh="/properties/office.jpg"
       />
       <div className="site-page">
@@ -39,3 +39,5 @@ export default function InsightsPage() {
     </>
   )
 }
+
+

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { DOI_NGU, KHU_VUC, VAN_PHONG } from '../../data/listings'
 import { useToast } from '../../context/ToastContext'
+import { themYeuCau } from '../../utils/yeuCauStore'
 
 export default function BriefPage() {
   const toast = useToast()
@@ -13,6 +14,16 @@ export default function BriefPage() {
 
   function gui(e) {
     e.preventDefault()
+    themYeuCau({
+      nguon: 'khach_ngoai',
+      chuDe: 'xem-phong',
+      tieuDe: `[Tìm căn] Yêu cầu tìm căn theo ngân sách (${form.khu || 'Hà Nội'})`,
+      hoTen: form.ten.trim(),
+      sdt: form.sdt.trim(),
+      email: form.email.trim(),
+      mucDo: 'binh_thuong',
+      noiDung: `Khu vực: ${form.khu || 'Tùy chọn'}. Số PN: ${form.pn || 'Tùy ý'}. Ngân sách: ${form.nganSach || 'Thương lượng'}. Thời hạn: ${form.thoiHan} tháng. Ghi chú: ${form.ghiChu || 'Không có'}`,
+    })
     toast.thanhCong('Đã nhận brief. Officer địa bàn sẽ gọi trong giờ hành chính.')
     navigate('/dat-lich/xac-nhan', {
       state: {

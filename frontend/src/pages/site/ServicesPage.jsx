@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { DICH_VU, VAN_PHONG } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function ServicesPage() {
       <SiteBanner
         kicker="Practice"
         title="Bốn việc một nhà leasing thực sự làm."
-        desc="Không phải sàn rao. Maison Cư ghép khách, chuẩn hóa căn, vận hành cư dân và định giá — cùng một desk."
+        desc="Không phải sàn rao. Black Panther ghép khách, chuẩn hóa căn, vận hành cư dân và định giá — cùng một desk."
         anh="/properties/office.jpg"
       />
       <div className="site-page">
@@ -40,7 +40,7 @@ export default function ServicesPage() {
         <div className="cta-band cta-band--flush">
           <div>
             <p className="page-kicker">Mandate</p>
-            <h2>Muốn căn vào quỹ Maison Cư?</h2>
+            <h2>Muốn căn vào quỹ Black Panther?</h2>
             <p>Desk khảo sát checklist 42 mục trước khi nhận độc quyền. Gọi {VAN_PHONG.dienThoai}.</p>
           </div>
           <Link to="/chu-nha" className="btn btn--gold">Dành cho chủ nhà</Link>
@@ -49,3 +49,5 @@ export default function ServicesPage() {
     </>
   )
 }
+
+

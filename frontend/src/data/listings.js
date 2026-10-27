@@ -1,9 +1,9 @@
-export const VAN_PHONG = {
-  ten: 'Maison Cư',
+﻿export const VAN_PHONG = {
+  ten: 'Black Panther',
   slogan: 'Private residences, professionally leased',
-  diaChi: 'Tầng 12, 27 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh',
-  dienThoai: '028 3822 1908',
-  email: 'leasing@maisoncu.vn',
+  diaChi: 'Tầng 12, 27 Tràng Tiền, Quận Hoàn Kiếm, TP. Hà Nội',
+  dienThoai: '024 3822 1908',
+  email: 'leasing@blackpanther.vn',
   gio: 'T2–T7 · 08:30–18:00',
 }
 
@@ -103,7 +103,7 @@ export const DOI_NGU = [
     chucVu: 'Head of Leasing',
     khu: 'Quận 1 · Thủ Thiêm',
     anh: '/properties/office.jpg',
-    email: 'chi@maisoncu.vn',
+    email: 'chi@blackpanther.vn',
     nam: '12 năm',
     khuIds: ['q1', 'q7'],
     bio: 'Phụ trách quỹ prime CBD và penthouse. Lọc hồ sơ trước khi mở private viewing, không xếp lịch nhóm.',
@@ -114,7 +114,7 @@ export const DOI_NGU = [
     chucVu: 'Senior Advisor',
     khu: 'Thảo Điền · Thủ Đức',
     anh: '/properties/living.jpg',
-    email: 'nguyen@maisoncu.vn',
+    email: 'nguyen@blackpanther.vn',
     nam: '9 năm',
     khuIds: ['td'],
     bio: 'Định giá compound, townhouse và căn 2 PN gần campus. Brief quý cho chủ nhà, không cắt giá lén trên kênh rao.',
@@ -125,7 +125,7 @@ export const DOI_NGU = [
     chucVu: 'Resident Manager',
     khu: 'Quận 3 · Bình Thạnh',
     anh: '/properties/interior.jpg',
-    email: 'yen@maisoncu.vn',
+    email: 'yen@blackpanther.vn',
     nam: '8 năm',
     khuIds: ['q3', 'bt'],
     bio: 'Bàn giao, bảo trì và cổng cư dân. Mọi work order đi qua desk — không nhắn nhóm loạn.',
@@ -149,7 +149,7 @@ export const TUYEN_DUNG = [
     diaDiem: 'Nguyễn Huệ, Quận 1',
     loai: 'Toàn thời gian',
     tomTat: 'Viết market note, đối chiếu occupancy khu vực, đề xuất niêm yết. Brief nội bộ, không phải content marketing.',
-    yeuCau: ['Am hiểu thuê TP.HCM 5 địa bàn Maison Cư', 'Viết ngắn, có số, có hàm ý định giá', 'Excel / mô hình occupancy cơ bản'],
+    yeuCau: ['Am hiểu thuê Hà Nội 5 địa bàn Black Panther', 'Viết ngắn, có số, có hàm ý định giá', 'Excel / mô hình occupancy cơ bản'],
   },
   {
     id: 'resident-associate',
@@ -168,7 +168,7 @@ export const BAO_CHI_BAI = [
     nguon: 'Forbes Vietnam',
     nam: '2025',
     tieu: 'Private leasing desks đang thay sàn rao ở phân khúc dịch vụ',
-    trich: 'Maison Cư giữ quỹ đủ nhỏ để một officer phụ trách từ xem nhà đến gia hạn — khác hẳn mô hình đăng ồ ạt.',
+    trich: 'Black Panther giữ quỹ đủ nhỏ để một officer phụ trách từ xem nhà đến gia hạn — khác hẳn mô hình đăng ồ ạt.',
   },
   {
     id: 'savills',
@@ -202,7 +202,7 @@ export const QUY_TRINH_THUE = [
 ]
 
 export const LOI_KHACH = [
-  { ten: 'Clara Bennett', vai: 'Cư dân The Marq', noi: 'Hợp đồng rõ, bàn giao đúng ảnh. Maison Cư làm việc như private bank của nhà ở.' },
+  { ten: 'Clara Bennett', vai: 'Cư dân The Marq', noi: 'Hợp đồng rõ, bàn giao đúng ảnh. Black Panther làm việc như private bank của nhà ở.' },
   { ten: 'Anh Minh Đức', vai: 'Chủ căn Empire City', noi: 'Không phải sàn rao. Một officer phụ trách từ xem nhà đến gia hạn, occupancy ổn định.' },
   { ten: 'Gia đình Sato', vai: 'Townhouse Thảo Điền', noi: 'Giấy tờ song ngữ, lịch xem nhà đúng giờ. Đúng chuẩn văn phòng leasing quốc tế.' },
   { ten: 'Léa Moreau', vai: 'Studio Pasteur', noi: 'Desk không đẩy căn không khớp. Xem một buổi, ký trong tuần — không inbox môi giới.' },
@@ -252,10 +252,10 @@ export const TIN_THI_TRUONG = [
     ngay: '2026-09-04',
     nhan: 'Prime stock',
     tieu: 'Penthouse Thủ Thiêm: vòng xem nhà kéo dài, cọc chặt',
-    tomTat: 'Khách yêu cầu wine cellar, concierge và hợp đồng quản gia. Maison Cư chỉ mở lịch private viewing.',
+    tomTat: 'Khách yêu cầu wine cellar, concierge và hợp đồng quản gia. Black Panther chỉ mở lịch private viewing.',
     anh: '/properties/06.jpg',
     noiDung: [
-      'Penthouse Thủ Thiêm không chạy theo lịch xem nhóm. Maison Cư chỉ mở private viewing sau khi lọc hồ sơ: ngân sách, thời hạn ở, yêu cầu quản gia.',
+      'Penthouse Thủ Thiêm không chạy theo lịch xem nhóm. Black Panther chỉ mở private viewing sau khi lọc hồ sơ: ngân sách, thời hạn ở, yêu cầu quản gia.',
       'Vòng xem kéo dài vì khách so sánh wine cellar, sân trời và chỗ đậu hầm. Cọc nên ghi rõ hoàn / giữ khi khách rút sau khi giữ chỗ.',
       'Hàm ý định giá: giữ mức premium. Không niêm yết song song trên kênh rao đại trà — làm loãng vị thế quỹ.',
     ],
@@ -266,17 +266,17 @@ export const CAU_HOI = [
   { nhom: 'Thuê căn', q: 'Phí niêm yết đã gồm những gì?', a: 'Giá tháng đã gồm phí quản lý tòa nhà. Điện, nước, internet và gửi xe tính theo bảng dịch vụ gắn trên hợp đồng.' },
   { nhom: 'Thuê căn', q: 'Đặt cọc bao nhiêu?', a: 'Thông thường bằng 2 tháng tiền thuê, giữ đến khi thanh lý và đối chiếu biên bản bàn giao.' },
   { nhom: 'Thuê căn', q: 'Xem nhà mất bao lâu để xác nhận?', a: 'Leasing desk xác nhận khung giờ trong 24 giờ làm việc. Penthouse chỉ mở private viewing.' },
-  { nhom: 'Chủ nhà', q: 'Maison Cư nhận mọi căn?', a: 'Không. Căn phải đạt pháp lý, hiện trạng và vị trí. Chủ nhà ký độc quyền leasing tối thiểu 12 tháng.' },
+  { nhom: 'Chủ nhà', q: 'Black Panther nhận mọi căn?', a: 'Không. Căn phải đạt pháp lý, hiện trạng và vị trí. Chủ nhà ký độc quyền leasing tối thiểu 12 tháng.' },
   { nhom: 'Chủ nhà', q: 'Báo cáo occupancy gửi thế nào?', a: 'Desk gửi brief quý: tỷ lệ lấp, bảo trì đã làm, đề xuất gia hạn. Không spam tin rao.' },
   { nhom: 'Cư dân', q: 'Cổng cư dân dùng để làm gì?', a: 'Xem hồ sơ thuê, thông báo desk, gửi concierge và đổi mật khẩu. Không thay thế việc khẩn cấp ngoài giờ.' },
   { nhom: 'Cư dân', q: 'Gia hạn cần báo trước bao lâu?', a: 'Trước 60 ngày hết hạn. Officer phụ trách căn sẽ đề xuất mức giá cùng khu.' },
 ]
 
 export const DIEU_KHOAN = [
-  { tieu: 'Niêm yết', doan: 'Giá và mô tả trên website phản ánh hồ sơ đo đạc Maison Cư tại thời điểm đăng. Căn có thể đổi trạng thái (trống, đặt cọc, bảo trì) mà không báo trước trên mọi kênh.' },
-  { tieu: 'Xem nhà', doan: 'Lịch xem là đề xuất, desk xác nhận theo giờ hành chính. Khách không được quay phim nội thất để đăng lại nếu chưa được chủ nhà và Maison Cư đồng ý.' },
+  { tieu: 'Niêm yết', doan: 'Giá và mô tả trên website phản ánh hồ sơ đo đạc Black Panther tại thời điểm đăng. Căn có thể đổi trạng thái (trống, đặt cọc, bảo trì) mà không báo trước trên mọi kênh.' },
+  { tieu: 'Xem nhà', doan: 'Lịch xem là đề xuất, desk xác nhận theo giờ hành chính. Khách không được quay phim nội thất để đăng lại nếu chưa được chủ nhà và Black Panther đồng ý.' },
   { tieu: 'Dữ liệu liên hệ', doan: 'Họ tên, điện thoại, email gửi qua form enquire chỉ dùng để leasing desk gọi lại. Không bán danh sách cho bên thứ ba.' },
-  { tieu: 'Cổng thành viên', doan: 'Tài khoản Owner, Leasing và Resident do Maison Cư cấp. Cư dân không chia sẻ phiên đăng nhập với người ở cùng.' },
+  { tieu: 'Cổng thành viên', doan: 'Tài khoản Owner, Leasing và Resident do Black Panther cấp. Cư dân không chia sẻ phiên đăng nhập với người ở cùng.' },
 ]
 
 export const LISTINGS = [
@@ -358,7 +358,7 @@ export const LISTINGS = [
     pin: { x: 54, y: 70 },
     anh: ['/properties/06.jpg', '/properties/hero.jpg', '/properties/08.jpg'],
     tienNghi: ['Sân trời riêng', 'Wine cellar', 'Bếp đảo', 'Concierge', '2 chỗ đậu hầm B1'],
-    moTa: 'Penthouse duplex với tầm nhìn toàn cảnh sông Sài Gòn. Maison Cư vận hành leasing và quản gia theo gói năm.',
+    moTa: 'Penthouse duplex với tầm nhìn toàn cảnh sông Sài Gòn. Black Panther vận hành leasing và quản gia theo gói năm.',
   },
   {
     id: 'mc-studio-05',
@@ -398,7 +398,7 @@ export const LISTINGS = [
     pin: { x: 76, y: 42 },
     anh: ['/properties/05.jpg', '/properties/living.jpg'],
     tienNghi: ['Sân vườn 40 m²', 'Phòng làm việc', 'Bếp ngoài trời', 'Garage 2 xe'],
-    moTa: 'Nhà phố 3 tầng hướng Nam, khu compound yên tĩnh. Maison Cư hỗ trợ hợp đồng dài hạn cho gia đình ngoại giao.',
+    moTa: 'Nhà phố 3 tầng hướng Nam, khu compound yên tĩnh. Black Panther hỗ trợ hợp đồng dài hạn cho gia đình ngoại giao.',
   },
   {
     id: 'mc-river-07',
@@ -496,3 +496,5 @@ export function listingsTuongTu(item, gioiHan = 3) {
 }
 
 export const LOAI_CAN = [...new Set(LISTINGS.map((x) => x.loai))]
+
+

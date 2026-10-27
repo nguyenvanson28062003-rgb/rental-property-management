@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { KHU_VUC, VAN_PHONG } from '../../data/listings'
 import { useToast } from '../../context/ToastContext'
+import { themYeuCau } from '../../utils/yeuCauStore'
 
 const BUOC = [
   { so: '01', tieu: 'Gửi hồ sơ căn', moTa: 'Địa chỉ, loại, hiện trạng. Desk hẹn khảo sát trong 48 giờ làm việc.' },
@@ -19,6 +20,16 @@ export default function OwnersPage() {
 
   function gui(e) {
     e.preventDefault()
+    themYeuCau({
+      nguon: 'khach_ngoai',
+      chuDe: 'khac',
+      tieuDe: `[Chủ nhà] Ký gửi căn hộ (${form.khu || 'Hà Nội'})`,
+      hoTen: form.ten.trim(),
+      sdt: form.sdt.trim(),
+      email: form.email.trim(),
+      mucDo: 'binh_thuong',
+      noiDung: `Loại BĐS: ${form.loai}. Khu vực: ${form.khu}. Giá mong muốn: ${form.giaMong || 'Thương lượng'}. Ghi chú: ${form.ghiChu || 'Không có'}`,
+    })
     toast.thanhCong('Đã nhận hồ sơ căn. Asset desk sẽ liên hệ để hẹn khảo sát.')
     setForm({ ten: '', sdt: '', email: '', khu: '', loai: 'Căn hộ', giaMong: '', ghiChu: '' })
   }
@@ -28,7 +39,7 @@ export default function OwnersPage() {
       <SiteBanner
         kicker="For owners"
         title="Đưa căn vào quỹ, không phải lên sàn rao."
-        desc="Maison Cư nhận độc quyền leasing tối thiểu 12 tháng. Ít căn, hồ sơ đủ, occupancy chịu trách nhiệm."
+        desc="Black Panther nhận độc quyền leasing tối thiểu 12 tháng. Ít căn, hồ sơ đủ, occupancy chịu trách nhiệm."
         anh="/properties/hero.jpg"
       />
       <div className="site-page">
@@ -102,7 +113,7 @@ export default function OwnersPage() {
             <h3>Điều kiện nhận quỹ</h3>
             <ul className="check-list">
               <li>Pháp lý rõ, không tranh chấp cho thuê</li>
-              <li>Hiện trạng khớp ảnh sau khi Maison Cư chụp</li>
+              <li>Hiện trạng khớp ảnh sau khi Black Panther chụp</li>
               <li>Độc quyền niêm yết tối thiểu 12 tháng</li>
               <li>Bàn giao có biên bản, không “xem xong tự vào”</li>
             </ul>
@@ -116,3 +127,5 @@ export default function OwnersPage() {
     </>
   )
 }
+
+

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { thongBaoLoi } from '../api/client'
@@ -41,14 +41,14 @@ export default function Login() {
         <div className="brand" style={{ border: 0, padding: 0, margin: 0 }}>
           <div className="brand-mark"><Icon name="home" size={20} /></div>
           <div>
-            <strong>Maison Cư</strong>
+            <strong>Black Panther</strong>
             <small>Member access</small>
           </div>
         </div>
         <div>
           <p className="page-kicker" style={{ color: 'var(--gold-2)' }}>Three desks, one house</p>
           <h2>Cổng thành viên theo đúng vai trên quỹ căn.</h2>
-          <p>Chủ trọ xem occupancy, quản lý vận hành leasing, cư dân mở hồ sơ thuê — cùng ngôn ngữ Maison Cư.</p>
+          <p>Chủ trọ xem occupancy, quản lý vận hành leasing, cư dân mở hồ sơ thuê — cùng ngôn ngữ Black Panther.</p>
         </div>
         <div className="login-roles">
           {DESKS.map((d) => (
@@ -75,10 +75,12 @@ export default function Login() {
           <div className="error-line">{loi}</div>
           <button className="btn btn--gold" disabled={dangGui}>{dangGui ? 'Đang xác thực…' : 'Vào cổng của bạn'}</button>
           <p className="muted" style={{ marginTop: 18 }}>
-            <Link to="/" className="text-link">← Về trang chủ Maison Cư</Link>
+            <Link to="/" className="text-link">← Về trang chủ Black Panther</Link>
           </p>
         </form>
       </section>
     </div>
   )
 }
+
+

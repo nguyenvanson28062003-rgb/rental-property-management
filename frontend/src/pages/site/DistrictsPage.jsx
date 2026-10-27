@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { KHU_VUC } from '../../data/listings'
 import { tien } from '../../utils/format'
@@ -9,7 +9,7 @@ export default function DistrictsPage() {
       <SiteBanner
         kicker="Districts"
         title="Khu vực desk am hiểu thật sự."
-        desc="Năm địa bàn Maison Cư nhận quỹ. Mỗi khu có khách điển hình, dải giá và căn đang vận hành."
+        desc="Năm địa bàn Black Panther nhận quỹ. Mỗi khu có khách điển hình, dải giá và căn đang vận hành."
         anh="/properties/04.jpg"
       />
       <div className="site-page">
@@ -30,3 +30,5 @@ export default function DistrictsPage() {
     </>
   )
 }
+
+

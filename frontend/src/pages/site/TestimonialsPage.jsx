@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import SiteBanner from '../../components/site/SiteBanner'
 import { LOI_KHACH } from '../../data/listings'
 
@@ -8,7 +8,7 @@ export default function TestimonialsPage() {
       <SiteBanner
         kicker="House voices"
         title="Lời từ người đã ký hợp đồng."
-        desc="Cư dân và chủ nhà trên quỹ Maison Cư — không phải review sàn rao."
+        desc="Cư dân và chủ nhà trên quỹ Black Panther — không phải review sàn rao."
         anh="/properties/living.jpg"
         compact
       />
@@ -38,3 +38,5 @@ export default function TestimonialsPage() {
     </>
   )
 }
+
+
