@@ -9,7 +9,7 @@ function docCookie(ten) {
 export const api = axios.create({
   baseURL: '/api',
   withCredentials: true,
-  timeout: 60000,,
+  timeout: 60000,
   xsrfCookieName: 'XSRF-TOKEN',
   xsrfHeaderName: 'X-XSRF-TOKEN',
   headers: { Accept: 'application/json' },
